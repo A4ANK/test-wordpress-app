@@ -9,12 +9,11 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
       name: frontend
   selector:
     app: wordpress
     tier: frontend
-  type: NodePort
+  type: LoadBalancer
 ---
 
 # Deployment
